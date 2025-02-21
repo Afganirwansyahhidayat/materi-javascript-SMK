@@ -3,7 +3,7 @@
 //  * 
 //  * Proses: 
 //  * 1. Pesan makanan lewat GoFood
-//  * 2. Tunggu makanan sampai
+//  * 2. Tunggu makanan sampai 
 //  * 3. Makananpun siap disantap
 //  * 
 //  * Catatan: 
