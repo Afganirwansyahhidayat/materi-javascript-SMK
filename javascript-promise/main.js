@@ -12,22 +12,22 @@
 //  * kita dengan restoran
 //  **/
 
-// // function makan(){
-// //     let makanan = null;
+function makan(){
+    let makanan = null;
 
-// //     console.log("Mesen GoFood");
+    console.log("Mesen GoFood");
 
-// //     setTimeout(function(){
-// //         console.log("Makanan Sampai!")
-// //         makanan = "Nasi Goreng"
-// //     }, 3000)
+    setTimeout(function(){
+        console.log("Makanan Sampai!")
+        makanan = "Nasi Goreng"
+    }, 3000)
     
-// //     console.log(`Mulai makan ${makanan}`)
-// // }
+    console.log(`Mulai makan ${makanan}`)
+}
 
-// // makan()
+makan()
 
-// //make promies
+// /make promies
 
 // const janji = new Promise(function(resolved, reject){
 //     // resolved("Martabak")
@@ -40,5 +40,7 @@
 //     })
 //     .catch((data)=> {
 //         console.error(data);
-        
 //     })
+
+
+
