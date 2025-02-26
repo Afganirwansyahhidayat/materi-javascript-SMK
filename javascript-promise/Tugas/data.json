@@ -1,0 +1,24 @@
+{
+    "siswa": [
+        {
+            "nama": "Afgan",
+            "umur": 16,
+            "tempat_tinggal": "Jakarta"
+        },
+        {
+            "nama": "Siti",
+            "umur": 17,
+            "tempat_tinggal": "Bandung"
+        },
+        {
+            "nama": "Rana",
+            "umur": 15,
+            "tempat_tinggal": "Surabaya"
+        },
+        {
+            "nama": "Alex",
+            "umur": 16,
+            "tempat_tinggal": "Yogyakarta"
+        }
+    ]
+}

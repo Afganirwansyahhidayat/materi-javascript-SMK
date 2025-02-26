@@ -1,46 +1,51 @@
 function inputData() { // Membuat fungsi inputData
     return new Promise((resolve, reject) => {
-        const stokTokoPertama = null;
+        const dataSiswa = true; // Menentukan stok toko pertama
         
         console.log("Sedang Menginput Data...");
         setTimeout(() => {
-            if (stokTokoPertama) {
-                resolve("Data Berhasil Diinput");
+            if (dataSiswa) {
+                resolve("Data Berhasil Diinput ke Database");
             } else {
-                reject("Data Gagal Diinput");
+                reject("Data Gagal Diinput ke Database");
             }   
         }, 3000);
     });
 }
 
-function fetchData() { // Membuat fungsi fetchData
-    return fetch('https://jsonplaceholder.typicode.com/invalid-url') // URL tidak valid
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`Invalid connection! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .catch(error => {
-        console.error('Error saat fetch:', error.message);
-        throw error;
-    });
-}
+function fetchData() {
+    return fetch('data.json') // Mengambil data dari file dari json
+        .then(response => {
+            if (response.ok) {
+                return response.json(); // Mengubah response ke JSON jika sukses
+            } else {
+                throw new Error(`Invalid connection! Status: ${response.status}`);
+            }
+        })
+        .catch(error => {
+            console.error('Error saat fetch:', error.message);
+            throw error;
+        });
+    }
 
 // Jalankan fetchData() langsung agar error terjadi di awal
-fetchData()
-    .then(user => {
-        console.log('User data:', user);
-    })
-    .catch(error => {
-        console.error('Fetch gagal:', error.message);
-    });
+setTimeout(() => {
+        fetchData()
+        .then(user => {
+            console.log('User data:', user);
+        })
+        .catch(error => {
+            console.error('Fetch gagal:', error.message);
+        });
+        
+
+    }, 4000)
 
 // Jalankan inputData() secara terpisah
 inputData()
     .then(response => {
-        console.log(response);
+        console.log(response);  // Fetch data hanya jika input berhasil
     })
     .catch(error => {
-        console.error('Input data gagal:', error);
+        console.error('Terjadi kesalahan:', error);
     });
